@@ -50,10 +50,10 @@ data/
 #### Train RSDN-GZSL
 ```bash
 # Train on CUB dataset (GZSL setting)
-python train.py --dataset CUB --gpu 0 --epochs 300 --batch_size 64
+python ./scripts/run_cub.py
 
-# Train on AWA2 (CZSL setting)
-python train.py --dataset AWA2 --setting CZSL --gpu 0 --epochs 150 --batch_size 64
+# Train on AWA2
+python ./scripts/run_awa2.py
 ```
 
 #### Key Training Arguments
