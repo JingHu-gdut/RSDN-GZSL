@@ -7,7 +7,8 @@ A PyTorch implementation of the paper "Recurrent Semantic Disentangling Network 
 - **Dual-Module Synergy**: Integrates Dual-Path Feature Generation Network (DPFGN) for semantic-visual alignment and Evolution Attention Network (EAN) for class consistency preservation.
 - **Strong Generalization**: Outperforms SOTA methods on both fine-grained (CUB, SUN) and coarse-grained (AWA2) datasets, and is compatible with multiple generative ZSL frameworks.
 
-<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/c51a533a-3d24-473d-889a-d3fa89671374" />
+<img width="1400" height="700" alt="image" src="https://github.com/user-attachments/assets/1d8942fe-08d2-4a03-b994-40b3b86e76d9" />
+
 
 
 ## 📋 Overview
@@ -18,7 +19,8 @@ RSDN-GZSL addresses this limitation by:
 2. Refining semantics with EAN to ensure class consistency, using visual prototypes as anchors.
 3. Feeding refined semantics back to DPFGN for iterative feature enhancement, forming a closed loop.
 
-<img width="1200" height="360" alt="image" src="https://github.com/user-attachments/assets/2cc08eb7-15d7-4057-a53f-7f8c15cffaf0" />
+<img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/ecf0dfd7-04e8-4d55-ba40-6f2f465db09d" />
+
 
 
 ## 🚀 Quick Start
@@ -89,21 +91,6 @@ RSDN-GZSL can enhance existing generative ZSL models:
 | CLSWGAN | CUB | 65.6% | 73.4% | +7.8% |
 | FREE | SUN | 52.4% | 59.4% | +7.0% |
 | SHIP | AWA2 | 74.7% | 79.1% | +4.4% |
-
-## 🎯 Core Components
-### 1. Dual-Path Feature Generation Network (DPFGN)
-- **Sample Path**: Disentangles instance-level semantic features via encoder-decoder with total correlation (TC) penalty.
-- **Class Path**: Generates robust class-level visual prototypes using label-supervised contrastive learning.
-
-### 2. Evolution Attention Network (EAN)
-- **Feature Activation Network (FAN)**: Refines features with residual blocks and Hadamard product fusion.
-- **Prototype-Guided Attention (PGA)**: Aligns semantic information with visual prototypes to ensure class consistency.
-
-### 3. Recurrent Iteration Mechanism
-Semantic information is iteratively updated using:
-```python
-z_y^(k+1) = α * z_y^(k) + (1 - α) * ŷ_z_y^(k)  # α=0.9 for smooth update
-```
 
 ## 📝 Citation
 If you use this code in your research, please cite our paper:
