@@ -97,10 +97,9 @@ If you use this code in your research, please cite our paper:
 ```bibtex
 @article{RSDNGZSL2025,
   title={Recurrent Semantic Disentangling Network for Generalized Zero-Shot Learning},
-  author={Jing Hu et al.},
-  journal={Neurocomputing},
+  author={},
+  journal={},
   year={2025},
-  note={Preprint submitted to Neurocomputing}
 }
 ```
 
