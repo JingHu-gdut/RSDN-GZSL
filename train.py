@@ -208,8 +208,6 @@ main_params = chain(netSD.parameters(), netR.parameters())
 optimizer = optim.Adam(netE.parameters(), lr=opt.lr)
 optimizerD = optim.Adam(netD.parameters(), lr=opt.lr, betas=(opt.beta1, 0.999))
 optimizerG = optim.Adam(netG.parameters(), lr=opt.lr, betas=(opt.beta1, 0.999))
-# optimizerG = optim.RMSprop(
-#     netG.parameters(), lr=0.0001, weight_decay=0.0001, momentum=0.9)
 optimizerFR = optim.Adam(netFR.parameters(), lr=opt.dec_lr, betas=(opt.beta1, 0.999))
 optimizerI = optim.Adam(netI.parameters(), lr=opt.dec_lr, betas=(opt.beta1, 0.999))
 optimizerSD = optim.Adam(main_params, lr=opt.dec_lr, betas=(opt.beta1, 0.999))
