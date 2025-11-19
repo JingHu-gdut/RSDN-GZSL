@@ -45,12 +45,27 @@ class DATA_LOADER(object):
         test_unseen_loc = matcontent['test_unseen_loc'].squeeze() - 1
 
         if opt.dataset == 'CUB':
+            # Adopt a clear classification method for storage to avoid information confusion and ensure completeness and accuracy during reproduction.
             self.update_att1 = torch.from_numpy(
                 sio.loadmat('<your path>/code/data/cub1.mat')['att']).float()
             self.update_att3 = torch.from_numpy(
                 sio.loadmat('<your path>/code/data/cub3.mat')['att']).float()
             self.att = (self.update_att1 + self.update_att3) / 2.0
+            
+        if opt.dataset == 'SUN':
+            self.update_att1 = torch.from_numpy(
+                sio.loadmat('<your path>/code/data/sun1.mat')['att']).float()
+            self.update_att3 = torch.from_numpy(
+                sio.loadmat('<your path>/code/data/sun3.mat')['att']).float()
+            self.att = (self.update_att1 + self.update_att3) / 2.0
 
+        if opt.dataset == 'AWA2':
+            self.update_att1 = torch.from_numpy(
+                sio.loadmat('<your path>/code/data/awa1.mat')['att']).float()
+            self.update_att3 = torch.from_numpy(
+                sio.loadmat('<your path>/code/data/awa3.mat')['att']).float()
+            self.att = (self.update_att1 + self.update_att3) / 2.0
+            
         self.attribute = torch.from_numpy(matcontent['att'].T).float()
         self.attribute = 0.9 * self.attribute + 0.1 * self.att
         self.attribute /= self.attribute.pow(2).sum(1).sqrt().unsqueeze(1).expand(self.attribute.size(0),
