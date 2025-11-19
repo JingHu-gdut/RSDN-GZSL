@@ -4,7 +4,7 @@
 GZSL
 """
 import os
-os.system('''OMP_NUM_THREADS=8 python train_free.py --gammaD 10 \
+os.system('''OMP_NUM_THREADS=8 python train.py --gammaD 10 \
 --gammaG 10 --gzsl --encoded_noise --manualSeed 9182 --preprocessing --cuda --image_embedding res101 \
 --class_embedding att --nepoch 51 --ngh 4096 --ndh 4096 --lambda1 10 --critic_iter 1 \
 --feed_lr 0.0001 --dec_lr 0.0001 --a1 0.01 --a2 0.01 \
