@@ -56,17 +56,6 @@ python ./scripts/run_cub.py
 python ./scripts/run_awa2.py
 ```
 
-#### Key Training Arguments
-| Argument | Description | Default |
-|----------|-------------|---------|
-| `--dataset` | Dataset name (AWA2/SUN/CUB) | CUB |
-| `--setting` | Task setting (CZSL/GZSL) | GZSL |
-| `--gpu` | GPU device ID | 0 |
-| `--epochs` | Training epochs | 100 |
-| `--batch_size` | Batch size | 64 (AWA2/CUB), 128 (SUN) |
-| `--lambda_cl` | Weight for contrastive loss | 0.5 |
-| `--lambda_ce` | Weight for cross-entropy loss | 1.0 |
-
 ## 📊 Experimental Results
 ### State-of-the-Art Performance
 | Dataset | Setting | Metric | RSDN-GZSL | SOTA (AENet/PSVMA) |
