@@ -46,9 +46,9 @@ class DATA_LOADER(object):
 
         if opt.dataset == 'CUB':
             self.update_att1 = torch.from_numpy(
-                sio.loadmat('/home/hujing/Tf/tfvaegan-master/datasets/CUB/cub1.mat')['att']).float()
+                sio.loadmat('<your path>/code/data/cub1.mat')['att']).float()
             self.update_att3 = torch.from_numpy(
-                sio.loadmat('/home/hujing/Tf/tfvaegan-master/datasets/CUB/cub3.mat')['att']).float()
+                sio.loadmat('<your path>/code/data/cub3.mat')['att']).float()
             self.att = (self.update_att1 + self.update_att3) / 2.0
 
         self.attribute = torch.from_numpy(matcontent['att'].T).float()
