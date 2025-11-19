@@ -7,6 +7,9 @@ A PyTorch implementation of the paper "Recurrent Semantic Disentangling Network 
 - **Dual-Module Synergy**: Integrates Dual-Path Feature Generation Network (DPFGN) for semantic-visual alignment and Evolution Attention Network (EAN) for class consistency preservation.
 - **Strong Generalization**: Outperforms SOTA methods on both fine-grained (CUB, SUN) and coarse-grained (AWA2) datasets, and is compatible with multiple generative ZSL frameworks.
 
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/c51a533a-3d24-473d-889a-d3fa89671374" />
+
+
 ## 📋 Overview
 Generalized Zero-Shot Learning (GZSL) aims to classify both seen and unseen classes without training data for unseen categories. Traditional methods rely on static expert-defined semantics, leading to overemphasis on high-frequency attributes and neglect of sample-specific features—especially in fine-grained scenarios.
 
@@ -14,6 +17,9 @@ RSDN-GZSL addresses this limitation by:
 1. Generating dynamic instance-level semantics via DPFGN (sample path for disentanglement, class path for visual prototypes).
 2. Refining semantics with EAN to ensure class consistency, using visual prototypes as anchors.
 3. Feeding refined semantics back to DPFGN for iterative feature enhancement, forming a closed loop.
+
+<img width="1200" height="360" alt="image" src="https://github.com/user-attachments/assets/2cc08eb7-15d7-4057-a53f-7f8c15cffaf0" />
+
 
 ## 🚀 Quick Start
 ### 1. Environment Setup
@@ -42,10 +48,10 @@ data/
 #### Train RSDN-GZSL
 ```bash
 # Train on CUB dataset (GZSL setting)
-python train.py --dataset CUB --gpu 0 --epochs 100 --batch_size 64
+python train.py --dataset CUB --gpu 0 --epochs 300 --batch_size 64
 
 # Train on AWA2 (CZSL setting)
-python train.py --dataset AWA2 --setting CZSL --gpu 0 --epochs 80 --batch_size 64
+python train.py --dataset AWA2 --setting CZSL --gpu 0 --epochs 150 --batch_size 64
 ```
 
 #### Key Training Arguments
@@ -58,12 +64,6 @@ python train.py --dataset AWA2 --setting CZSL --gpu 0 --epochs 80 --batch_size 6
 | `--batch_size` | Batch size | 64 (AWA2/CUB), 128 (SUN) |
 | `--lambda_cl` | Weight for contrastive loss | 0.5 |
 | `--lambda_ce` | Weight for cross-entropy loss | 1.0 |
-
-#### Evaluate
-```bash
-# Evaluate on trained model
-python evaluate.py --dataset CUB --model_path ./checkpoints/RSDN-GZSL_CUB.pth
-```
 
 ## 📊 Experimental Results
 ### State-of-the-Art Performance
