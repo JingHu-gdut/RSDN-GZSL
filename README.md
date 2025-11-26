@@ -95,7 +95,8 @@ If you use this code in your research, please cite our paper:
 ## 📄 References
 
 We thank the following repos for providing helpful components in our work: <br>
--[FREE](https://github.com/shiming-chen/FREE) <br>
--[SHIP](https://github.com/mrflogs/SHIP)
+-[SDGZSL(ICCV'21)](https://github.com/uqzhichen/SDGZSL) <br>
+-[FREE(ICCV'21)](https://github.com/shiming-chen/FREE) <br>
+-[SHIP(ICCV'23)](https://github.com/mrflogs/SHIP) 
 
 
