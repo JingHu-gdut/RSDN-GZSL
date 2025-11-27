@@ -7,7 +7,8 @@ A PyTorch implementation of the paper "Recurrent Semantic Disentangling Network 
 - **Dual-Module Synergy**: Integrates Dual-Path Feature Generation Network (DPFGN) for semantic-visual alignment and Evolution Attention Network (EAN) for class consistency preservation.
 - **Strong Generalization**: Outperforms SOTA methods on both fine-grained (CUB, SUN) and coarse-grained (AWA2) datasets, and is compatible with multiple generative ZSL frameworks.
 
-<img width="1400" height="700" alt="image" src="https://github.com/user-attachments/assets/1d8942fe-08d2-4a03-b994-40b3b86e76d9" />
+<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/e7d0be56-6e18-4c57-a201-2a8d69d4dcdb" />
+
 
 
 
@@ -87,7 +88,7 @@ If you use this code in your research, please cite our paper:
 @article{RSDNGZSL2025,
   title={Recurrent Semantic Disentangling Network for Generalized Zero-Shot Learning},
   author={Jing Hu, Min Meng and Jigang Wu},
-  journal={Neurocomputing},
+  journal={Signal Processing},
   year={2025},
 }
 ```
